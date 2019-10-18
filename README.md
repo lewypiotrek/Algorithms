@@ -1,4 +1,5 @@
 # Algorithms
 
-Linked list with template
-Queue
+1.Linked list with template
+
+2.Queue
