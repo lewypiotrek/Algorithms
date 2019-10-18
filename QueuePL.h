@@ -35,9 +35,7 @@ public:
 
 };
 
-
 ///////////////////////////////////////////////////////
-
 
 template <class Tc>
 QueuePL<Tc>::QueuePL()
