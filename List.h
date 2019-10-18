@@ -2,8 +2,8 @@
 #include<iostream>
 /*
 	Piotr Lewandowski - Lista jednokierunkowa z szablonami
+	17.10.2019r
 */
-
 
 // Struktra pojedynczego elementu
 template <class Ts>
