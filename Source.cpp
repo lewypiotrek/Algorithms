@@ -18,5 +18,7 @@ int main()
 
 	q->ViewIndex(16);
 	system("pause");
+
+
 	return 0;
 }
