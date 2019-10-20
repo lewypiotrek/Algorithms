@@ -121,6 +121,7 @@ int QueuePL<Tc>::size()
 template <class Tc>
 void QueuePL<Tc>::remove()
 {
+	
 	if (first != nullptr)
 	{
 		ElementQueue<Tc> * temp = first;
