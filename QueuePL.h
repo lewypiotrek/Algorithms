@@ -21,17 +21,20 @@ struct ElementQueue
 template <class Tc>
 class QueuePL
 {
-public:
+private:
 	ElementQueue<Tc> * first;
 	ElementQueue<Tc> * last;
 
+public:
 	QueuePL();
 	~QueuePL();
 
 	void add(Tc v);
 	void view();
+	void ViewIndex(int index);
 	int size();
 	void remove();
+	bool isEmpty();
 
 };
 
@@ -81,6 +84,24 @@ void QueuePL<Tc>::view()
 	}
 }
 
+template<class Tc>
+void QueuePL<Tc>::ViewIndex(int index)
+{
+	if (index < this->size())
+	{
+		ElementQueue<Tc> * temp = first;
+		int i = 0;
+		while (i != index)
+		{
+			temp = temp->next;
+			i++;
+		}
+		std::cout << "Wartosc indexu: " << temp->value << "\n";
+		if (temp->next != nullptr)
+			std::cout << "Wartosc nastepnego: " << temp->next->value << "\n";
+	}
+}
+
 template <class Tc>
 int QueuePL<Tc>::size()
 {
@@ -105,5 +126,17 @@ void QueuePL<Tc>::remove()
 		ElementQueue<Tc> * temp = first;
 		first = temp->next;
 		delete temp;
+	}
+}
+
+template<class Tc>
+inline bool QueuePL<Tc>::isEmpty()
+{
+	if (first == nullptr)
+	{
+		return true;
+	}
+	else {
+		return false;
 	}
 }
