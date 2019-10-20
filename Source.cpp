@@ -16,7 +16,7 @@ int main()
 		cout << "\n nie jest pusty \n";
 	cout << q->size() << endl;
 
-	q->ViewIndex(1);
+	q->ViewIndex(16);
 	system("pause");
 	return 0;
 }
