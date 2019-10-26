@@ -31,6 +31,7 @@ public:
 	bool isEmpty();
 	void ViewIndex(int index);
 	int GetSize();
+	Tc * test();
 
 private:
 	Element<Tc> * first;
@@ -172,3 +173,5 @@ inline int List<Tc>::GetSize()
 	}
 	return size;
 }
+
+

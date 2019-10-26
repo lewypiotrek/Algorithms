@@ -2,8 +2,11 @@
 
 
 
-Station::Station()
+Station::Station(short h, short m)
 {
+	this->h = h;
+	this->m = m;
+
 }
 
 

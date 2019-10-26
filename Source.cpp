@@ -2,6 +2,8 @@
 #include"QueuePL.h"
 #include "List.h"
 #include <string>
+#include "Station.h"
+
 
 using namespace std;
 
@@ -20,12 +22,7 @@ int main()
 	*/
 
 	
-	List<string> * l = new List<string>;
-	l->Add("dsa");
-	l->Add("sda");
-	//l->Add(1443421);
-	//l->Add(144221);
-	l->View();
+	List<Station *> * l = new List<Station *>;
 	
 
 	system("pause");
