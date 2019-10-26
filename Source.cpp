@@ -22,8 +22,9 @@ int main()
 	*/
 
 	
-	List<Station *> * l = new List<Station *>;
-	
+	//List<Station *> * l = new List<Station *>;
+	Station * s = new Station();
+	cout << s;
 
 	system("pause");
 

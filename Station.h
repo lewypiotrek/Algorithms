@@ -8,7 +8,6 @@ class Station
 private:
 	string name;
 	short x, y;
-public:
 	short h, m;
 
 public:
@@ -16,21 +15,23 @@ public:
 	Station();
 	~Station();
 
-	void view()
-	{
-		cout << h << " " << h << "\n";
-	}
-
 	Station operator=(const Station &s2)
 	{
 		this->h = s2.h;
-		//cout << this->x;
 		return *this;
 	}
 
+	// Przeciπøenie = dla wskaünika (dla dynamicznej listy)
 	friend ostream & operator<< (ostream & out, Station const * s)
 	{
-		out << "test " << s->h;
+		out << s->name <<" | Hour: " << s->h << ":" << s->m << " | Coordinate:(" << s->x << "," << s->y << ")\n";
+		return out;
+	}
+
+	// Przeciπøenie = dla referencji (dla statycznej listy)
+	friend ostream & operator<< (ostream & out, Station const & s)
+	{
+		out << s.name << " | Hour: " << s.h << ":" << s.m << " | Coordinate:(" << s.x << "," << s.y << ")\n";
 		return out;
 	}
 
