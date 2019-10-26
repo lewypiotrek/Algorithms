@@ -1,6 +1,7 @@
 #include <iostream>
 #include"QueuePL.h"
 #include "List.h"
+#include <string>
 
 using namespace std;
 
@@ -18,14 +19,14 @@ int main()
 	q->ViewIndex(16);
 	*/
 
-	/*
-	List<int> * l = new List<int>;
-	l->Add(141);
-	l->Add(342432);
-	l->Add(1443421);
-	l->Add(144221);
+	
+	List<string> * l = new List<string>;
+	l->Add("dsa");
+	l->Add("sda");
+	//l->Add(1443421);
+	//l->Add(144221);
 	l->View();
-	*/
+	
 
 	system("pause");
 

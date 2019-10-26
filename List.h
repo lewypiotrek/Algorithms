@@ -25,7 +25,7 @@ class List
 public:
 	List();
 
-	void Add(int v);
+	void Add(Tc v);
 	void Remove(int index);
 	void View();
 	bool isEmpty();
@@ -45,7 +45,7 @@ List<Tc>::List()
 }
 
 template <class Tc>
-void List<Tc>::Add(int v)
+void List<Tc>::Add(Tc v)
 {
 	Element<Tc> * newElement = new Element<Tc>(v);
 
