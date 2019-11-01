@@ -9,22 +9,19 @@ using namespace std;
 
 int main()
 {	
-	/*
-	QueuePL<int> * q = new QueuePL<int>;
-	q->add(15);
-	q->add(16);
-	q->add(116);
-	q->view();
-	if (!q->isEmpty())
-		cout << "\n nie jest pusty \n";
-	cout << q->size() << endl;
-	q->ViewIndex(16);
-	*/
-
 	
-	//List<Station *> * l = new List<Station *>;
-	Station * s = new Station();
-	cout << s;
+	List<Station *> * l = new List<Station *>;
+	Station * s = new Station(3,3,"Warszawa");
+	Station * x = new Station(6, 5, "Lodz");
+	Station * y = new Station(2, 6, "Poznan");
+	s->SetCoords(5, 5);
+	s->SetTime(14, 15);
+	//cout << s;
+	l->Add(s);
+	l->Add(x);
+	l->Add(y);
+	l->View();
+
 
 	system("pause");
 

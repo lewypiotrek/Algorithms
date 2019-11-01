@@ -11,24 +11,31 @@ private:
 	short h, m;
 
 public:
-	Station(short h,short m);
+	Station(short h,short m,string name);
 	Station();
 	~Station();
+	void SetCoords(short x, short y);
+	void SetTime(short h, short m);
+	void SetName(string n);
 
+	// Jeøeli parametr 'x' zwrÛci x jeøeli 'y' zwrÛci y.
+	short GetValue(char v);
+	
+	// Przeciaøenie = 
 	Station operator=(const Station &s2)
 	{
 		this->h = s2.h;
 		return *this;
 	}
 
-	// Przeciπøenie = dla wskaünika (dla dynamicznej listy)
+	// Przeciπøenie << dla wskaünika (dla dynamicznej listy)
 	friend ostream & operator<< (ostream & out, Station const * s)
 	{
 		out << s->name <<" | Hour: " << s->h << ":" << s->m << " | Coordinate:(" << s->x << "," << s->y << ")\n";
 		return out;
 	}
 
-	// Przeciπøenie = dla referencji (dla statycznej listy)
+	// Przeciπøenie << dla referencji (dla statycznej listy)
 	friend ostream & operator<< (ostream & out, Station const & s)
 	{
 		out << s.name << " | Hour: " << s.h << ":" << s.m << " | Coordinate:(" << s.x << "," << s.y << ")\n";

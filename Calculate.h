@@ -7,6 +7,6 @@ class Calculate
 public:
 	Calculate();
 	~Calculate();
-	void CalculateDistance(Station s1,Station s2);
+	void CalculateDistance(Station & s1,Station & s2);
 };
 

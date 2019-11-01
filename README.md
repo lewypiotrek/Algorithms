@@ -1,8 +1,23 @@
 # Algorithms
 
-1.Linked list with template
+Airplane flight simulator. Application is a study project. 
 
-2.Queue
+INPUT:
+Program recive information about:
+- stations and airports coordinates 
+- types of planes
+- coordinates of anticyclone and cyclone
+
+OUTPUT:
+Program calculate time of flight between airports having regard to the conditions of weather. Program returns: 
+- time of the flight 
+- departure time and arrival time
+- delay 
+- flight route 
+
+----------------------------------------------------------------------------------------------
+
+In this program Im using my own Queue and list implementation.
 
 
-Symulator lotów.
+Copyright © 2019 by Piotr Lewandowski 
