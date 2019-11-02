@@ -24,6 +24,7 @@ class List
 {
 public:
 	List();
+	~List();
 
 	void Add(Tc v);
 	void Remove(int index);
@@ -31,7 +32,6 @@ public:
 	bool isEmpty();
 	void ViewIndex(int index);
 	int GetSize();
-	Tc * test();
 
 private:
 	Element<Tc> * first;
@@ -43,6 +43,18 @@ template <class Tc>
 List<Tc>::List()
 {
 	first = nullptr;
+}
+
+template <class Tc>
+List<Tc>::~List()
+{
+	Element<Tc>* currentNode = this->first;		// initialize current node to root
+	while (currentNode)
+	{
+		Element<Tc>* nextNode = currentNode->next;    // get next node
+		delete currentNode;                         // delete current
+		currentNode = nextNode;                     // set current to "old" next
+	}
 }
 
 template <class Tc>
@@ -71,7 +83,8 @@ void List<Tc>::Add(Tc v)
 template <class Tc>
 void List<Tc>::Remove(int index)
 {
-	if (index < this->GetSize() - 1)
+	//if(!isEmpty())
+	if (index < this->GetSize())
 	{
 
 		if (index == 0)
