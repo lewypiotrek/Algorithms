@@ -1,2 +1,9 @@
-3
+4
 Warszawa
+3 4
+Gdansk
+15 16
+Lodz
+167 214
+Poznan
+53 16

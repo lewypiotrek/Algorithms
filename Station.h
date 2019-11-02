@@ -25,6 +25,10 @@ public:
 	Station operator=(const Station &s2)
 	{
 		this->h = s2.h;
+		this->m = s2.m;
+		this->name = s2.name;
+		this->x = s2.x;
+		this->y = s2.y;
 		return *this;
 	}
 

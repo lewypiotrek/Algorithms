@@ -10,7 +10,7 @@ using namespace std;
 class Simulator
 {
 
-private:
+public:
 	List<Station> * StationsList;
 	int size;
 public:
