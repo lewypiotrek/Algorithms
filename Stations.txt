@@ -1,8 +1,8 @@
-4
+4 12 0
 Warszawa
-3 4
+30 30
 Gdansk
-15 16
+50 50
 Lodz
 167 214
 Poznan

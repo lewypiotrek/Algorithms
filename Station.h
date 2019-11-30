@@ -12,6 +12,7 @@ private:
 	short h, m;
 
 public:
+	friend class Simulator;
 	Station(short h,short m,string name);
 	Station();
 	~Station();

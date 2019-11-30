@@ -32,6 +32,7 @@ public:
 	bool isEmpty();
 	void ViewIndex(int index);
 	int GetSize();
+	Tc * GetPointer(int index);
 
 private:
 	Element<Tc> * first;
@@ -186,5 +187,20 @@ inline int List<Tc>::GetSize()
 	}
 	return size;
 }
+
+template<class Tc>
+inline Tc * List<Tc>::GetPointer(int index)
+{
+	Element<Tc> * temp = first;
+	int i = 0;
+	while (i != index)
+	{
+		temp = temp->next;
+		i++;
+	}
+	return & temp->value;
+}
+
+
 
 
