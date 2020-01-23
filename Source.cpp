@@ -20,12 +20,25 @@ int main()
 
 	Simulator *s = new Simulator();
 	s->LoadStationsByFile("src/Stations.txt");
-	cout << "\n" << s->Distance(50, 50, 30, 30) << "\n";
+
+	cout << "\n* * *   SYMULATOR LOTOW - PIOTR LEWANDOWSKI   * * *\n\n";
+
+	cout << "\nCALKOWITY DYSTANS TRASY: " << s->Distance(50, 50, 30, 30) << "\n";
 	s->CalculateDistance();
 
+	cout << "\n----------------------------------------------\n";
+	cout << "WYBRANY SAMOLOT";
+	cout << "\n----------------------------------------------\n";
+	s->P1->View();
+
+
+
+	cout << "\n\n\n----------------------------------------------\n";
+	cout << "TRASA PRZELOTU";
+	cout << "\n----------------------------------------------\n";
 	// po zliczeniu
 	s->StationsList->View();
-
+	cout << "----------------------------------------------\n";
 	system("pause");
 	return 0;
 }

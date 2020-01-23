@@ -26,15 +26,19 @@ public:
 			name = n;
 			s = speed;
 		}
+		void View()
+		{
+			cout << "MODEL:      " << name << "\n";
+			cout << "MAX SPEED:  " << speed << "km/h\n";
+		}
 	};
-
-private:
-	Plane * P1;
+	
 public:
 	List<Station> * StationsList;
 	int size;
 	int hour;	// temporary hour to calculate time
 	int min;	// temporary minutes  to calculate time
+	Plane * P1;
 
 public:
 	Simulator();
@@ -43,6 +47,6 @@ public:
 	void CalculateDistance();
 	long double toRadians(const long double degree);
 	long double Distance(long double lat1, long double long1, long double lat2, long double long2);
-	void ConvertHour(double distanceTime, int & h, int & m);
+	void ConvertHour(double distanceTime, int & h, int & m,int &i);
 };
 

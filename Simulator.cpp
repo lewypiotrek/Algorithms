@@ -82,7 +82,7 @@ void Simulator::CalculateDistance()
 		double v = P1->speed;
 
 //		insert value of flight time
-		ConvertHour(s / v, hour, min);
+		ConvertHour(s / v, hour, min,i);
 
 		int addMin = 0;
 
@@ -148,12 +148,12 @@ long double Simulator::Distance(long double lat1, long double long1, long double
 	return ans;
 }
 
-void Simulator::ConvertHour(double distanceTime, int & h, int & m)
+void Simulator::ConvertHour(double distanceTime, int & h, int & m,int &i)
 {
 	int toMin = distanceTime * 60;
 	h = toMin / 60;
 	m = toMin - h * 60;
-	cout << "czas przelotu " << h << ":" << m << "\n";
+	cout << "CZAS PRZELOTU DO WEZLA "<< i+1 << ": " << h << ":" << m << "\n";
 }
 
 
