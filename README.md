@@ -18,6 +18,3 @@ Program calculate time of flight between airports having regard to the condition
 ----------------------------------------------------------------------------------------------
 
 In this program Im using my own Queue and list implementation.
-
-
-Copyright © 2019 by Piotr Lewandowski 
